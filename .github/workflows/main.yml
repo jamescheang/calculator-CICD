@@ -1,0 +1,14 @@
+name: Start up
+on:
+  push:
+    branches: [main]
+jobs:
+  build: 
+    name: Build virtual OS
+    runs-on: Ubuntu-latest
+    steps:
+    - name: checkout codes
+      uses: actions/checkout@v3
+    - name: print and list out content
+      run: |
+        ls
