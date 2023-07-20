@@ -12,3 +12,9 @@ jobs:
     - name: print and list out content
       run: |
         ls
+    - name: install requirements
+      run: pip install -r requirements.txt
+    - name: execute pytest
+      run: |
+        cd tests
+        pytest test_calculator.py -v
